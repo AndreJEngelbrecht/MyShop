@@ -125,7 +125,7 @@ namespace MyShop.WebUI.Controllers
         }
         [HttpPost]
         [ActionName("Delete")]
-        public ActionResult ConfirmDelete(string Id)
+        public ActionResult ConfirmDelete(string Id, HttpPostedFileBase file)
         {
             Product ProductToDelete = context.Find(Id);
             if(ProductToDelete == null)
